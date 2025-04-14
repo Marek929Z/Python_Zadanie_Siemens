@@ -1,0 +1,24 @@
+data:
+  input_dataset_path: data/Data.csv
+  gt_dataset_path: data/GT_Data.csv
+  cmp_dataset_path: data/Modify_Data.csv
+  gt_statistics_path: report/GT_Stats.csv
+  cmp_statistics_path: report/Modified_Stats.csv
+  report_path: report/Differences_Report.csv
+  pdf_report_path: report/Comparison_Visual_Report.pdf
+  graphs_path: report/graphs
+  density_subfolder: density
+  boxplot_subfolder: boxplots
+  histogram_subfolder: histograms
+
+thresholds:
+  global: 20  # global threshold for all measurements
+  per_measurement: # threshol for individual measurements
+    Val 1: 10
+    Val A: 15
+
+modification:
+  probability_change_values: 1.0  # probability of changing values (10%)
+  probability_missing: 0.1 # probability of introducing missing values (10%)
+  probability_add_sample: 0.1 # probability of adding an extra sample (10%)
+random_seed: 42
